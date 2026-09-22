@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lotless — factory-direct instead of the dealer lot</title>
+  <meta name="description" content="Tap a dealer-lot vehicle. See the factory-direct alternative, and an honest why / why-not. No leads. No rooftops." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">Lotless<span>.</span></div>
+      <div class="tag">No dealer network. No leads. Factory or nothing.</div>
+    </header>
+
+    <h1>You don’t need that<br>Tahoe.</h1>
+    <p class="lede">
+      Pick the car on the lot. We’ll show the factory-direct version of the same job —
+      Tesla, Rivian, Lucid, Slate, Scout — and tell you when it is <em>not</em> the same job.
+    </p>
+
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search Tahoe, F-150, Camry, Cayenne…" />
+      <select id="state" aria-label="Your state"></select>
+    </div>
+    <div class="chips">
+      <button class="chip on" data-body="all">All jobs</button>
+      <button class="chip" data-body="3-row">Three-row</button>
+      <button class="chip" data-body="truck">Trucks</button>
+      <button class="chip" data-body="sedan">Sedans</button>
+      <button class="chip" data-body="luxury">Luxury</button>
+      <button class="chip" data-body="compact">Compact</button>
+    </div>
+
+    <div id="browse">
+      <div class="tag" id="count" style="margin-bottom:10px"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+    <div class="detail" id="detail"></div>
+
+    <footer>
+      Lotless does not sell cars, take dealer money, or pass your name to a store.
+      Links go to the manufacturer. Restricted-state flags are conservative and incomplete — confirm with the OEM.
+      Built as an MVP. Catalog is curated, not scraped.
+    </footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
